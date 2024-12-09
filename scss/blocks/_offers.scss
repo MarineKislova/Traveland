@@ -1,0 +1,155 @@
+.offers {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    @include adaptiv-value("padding-top", 70, 40, 0);
+    @include adaptiv-value("padding-bottom", 70, 40, 0);
+    // padding-top: 140px;
+    // padding-right: 140px;
+  }
+
+  &__title {
+    align-self: center;
+    font-family: "Gelasio";
+    font-weight: 500;
+    @include adaptiv-value("font-size", 43, 27, 0);
+    // font-size: 43px;
+    line-height: 140%;
+    /* or 60px */
+  }
+
+  &__text {
+    align-self: center;
+    width: 450px;
+    font-weight: 400;
+    @include adaptiv-value("font-size", 18, 16, 0);
+    // font-size: 18px;
+    line-height: 160%;
+    /* or 29px */
+    text-align: center;
+    opacity: 0.6;
+    @include adaptiv-value("padding-top", 20, 5, 0);
+  }
+
+  &__cards {
+    display: flex;
+    @include adaptiv-value("padding-top", 60, 40, 0);
+    gap: 73px;
+    // flex-direction: row;
+  }
+
+  &__card-img {
+    max-width: 280px;
+    width: 280px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__card-title {
+    font-family: "Gelasio";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+    /* identical to box height, or 36px */
+  }
+
+  &__card-text {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__card-location {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+    opacity: 0.6;
+
+    &::before {
+      content: "";
+      background: url("../icons/location.svg") center no-repeat;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      //   opacity: 0.6;
+    }
+  }
+
+  &__card-rating {
+    font-size: 18px;
+    line-height: 150%;
+    /* identical to box height, or 27px */
+
+    &::before {
+      content: "";
+      background: url("../icons/rating.svg") center no-repeat;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      //   opacity: 0.6;
+    }
+  }
+
+  &__card-duration {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    /* identical to box height, or 24px */
+    opacity: 0.6;
+  }
+
+  &__card-price {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    /* identical to box height, or 27px */
+    opacity: 1;
+    span {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      /* identical to box height, or 24px */
+      opacity: 0.6;
+    }
+  }
+}
+
+.pagonation {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  @include adaptiv-value("padding-top", 51, 31, 0);
+
+  &__arrow-prev {
+    font-size: 22px;
+  }
+
+  &__row {
+    gap: 3px;
+  }
+
+  &__btn {
+    width: 75px;
+    height: 5px;
+    background: rgba(201, 69, 59, 0.1);
+    border-radius: 10px;
+  }
+
+  &__arrow-next {
+    font-size: 22px;
+  }
+}
+.active {
+  background-color: var(--color-btn);
+}

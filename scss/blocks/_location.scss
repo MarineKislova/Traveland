@@ -1,0 +1,85 @@
+.location {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    @include adaptiv-value("padding-top", 70, 40, 0);
+    @include adaptiv-value("padding-bottom", 70, 40, 0);
+  }
+
+  &__title {
+    // width: 338px;
+    // height: 60px;
+    display: flex;
+    justify-content: center;
+    font-family: "Gelasio";
+    font-style: normal;
+    font-weight: 500;
+    // font-size: 43px;
+    @include adaptiv-value("font-size", 43, 27, 0);
+    line-height: 140%;
+    /* or 60px */
+    // @include adaptiv-value("padding-top", 140, 40, 0);
+    // padding-top: 140px;
+  }
+
+  &__text {
+    align-self: center;
+    max-width: 735px;
+    @include adaptiv-value("font-size", 18, 16, 0);
+    // font-size: 18px;
+    line-height: 160%;
+    /* or 29px */
+    text-align: center;
+    opacity: 0.6;
+    @include adaptiv-value("padding-top", 20, 5, 0);
+    // padding-top: 20px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 31px;
+    @include adaptiv-value("padding-top", 50, 30, 0);
+    // padding-top: 50px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    @include adaptiv-value("gap", 18, 10, 0);
+    // gap: 18px;
+  }
+
+  &__img {
+    img {
+      width: 100%;
+      height: 80%;
+      object-fit: cover;
+    }
+  }
+
+  &__card-title {
+    // width: 182px;
+    // height: 36px;
+    font-weight: 500;
+    @include adaptiv-value("font-size", 24, 20, 0);
+    // font-size: 24px;
+    line-height: 150%;
+    /* identical to box height, or 36px */
+    text-align: center;
+    padding: 0px 27px;
+  }
+
+  &__card-text {
+    // width: 306px;
+    // height: 55px;
+    font-weight: 400;
+    @include adaptiv-value("font-size", 18, 16, 0);
+    // font-size: 18px;
+    line-height: 160%;
+    /* or 29px */
+    text-align: center;
+    opacity: 0.6;
+    padding: 0px 27px;
+  }
+}
