@@ -70,6 +70,10 @@ $responsiveType: 2;
   }
 }
 
+.open {
+  display: flex !important;
+}
+
 @import "../scss/blocks/header";
 @import "../scss/blocks/location";
 @import "../scss/blocks/offers";
