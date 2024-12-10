@@ -409,21 +409,26 @@ h6 {
   padding-top: calc(5px + 15 * (100vw - 320px) / 1600);
 }
 .offers__cards {
+  padding-top: calc(40px + 20 * (100vw - 320px) / 1600);
+  overflow: hidden;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 10px;
+}
+.offers__cards-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: calc(40px + 20 * (100vw - 320px) / 1600);
-  gap: 73px;
-}
-.offers__card-img {
-  max-width: 280px;
-  width: 280px;
-}
-.offers__card-img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: calc(3px + 70 * (100vw - 320px) / 1600);
 }
 .offers__card {
   display: -webkit-box;
@@ -433,6 +438,28 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 280px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background: #fff;
+  -webkit-box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.31);
+          box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.31);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: left;
+}
+.offers__card-img {
+  border-radius: 10px;
+  max-width: 180px;
+}
+.offers__card-img img {
+  width: 80%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .offers__card-title {
   font-family: "Gelasio";
@@ -445,11 +472,12 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 50px;
+  gap: calc(25px + 25 * (100vw - 320px) / 1600);
 }
 .offers__card-location {
   font-weight: 400;
   font-size: 20px;
+  font-size: calc(16px + 4 * (100vw - 320px) / 1600);
   line-height: 150%;
   /* identical to box height, or 30px */
   opacity: 0.6;
@@ -459,7 +487,8 @@ h6 {
   background: url("../icons/location.svg") center no-repeat;
   width: 20px;
   height: 20px;
-  margin-right: 10px;
+  margin-right: 5px;
+  opacity: 0.6;
 }
 .offers__card-rating {
   font-size: 18px;
@@ -472,6 +501,7 @@ h6 {
   width: 20px;
   height: 20px;
   margin-right: 10px;
+  opacity: 0.6;
 }
 .offers__card-duration {
   font-weight: 400;
@@ -509,6 +539,7 @@ h6 {
           align-items: center;
   gap: 50px;
   padding-top: calc(31px + 20 * (100vw - 320px) / 1600);
+  gap: calc(30px + 20 * (100vw - 320px) / 1600);
 }
 .pagonation__arrow-prev {
   font-size: 22px;
@@ -518,16 +549,16 @@ h6 {
 }
 .pagonation__btn {
   width: 75px;
+  width: calc(20px + 55 * (100vw - 320px) / 1600);
   height: 5px;
   background: rgba(201, 69, 59, 0.1);
   border-radius: 10px;
 }
+.pagonation__btn.active {
+  background: var(--color-btn);
+}
 .pagonation__arrow-next {
   font-size: 22px;
-}
-
-.active {
-  background-color: var(--color-btn);
 }
 
 .blog__container {
@@ -681,7 +712,6 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-height: 548px;
   padding-top: calc(40px + 30 * (100vw - 320px) / 1600);
   padding-bottom: calc(40px + 30 * (100vw - 320px) / 1600);
   -webkit-box-pack: justify;

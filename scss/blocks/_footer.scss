@@ -3,11 +3,10 @@
   background: rgba(38, 148, 153, 0.04);
   &__container {
     display: flex;
-    max-height: 548px;
+    // max-height: 548px;
     @include adaptiv-value("padding-top", 70, 40, 0);
     @include adaptiv-value("padding-bottom", 70, 40, 0);
     justify-content: space-between;
-    // padding: 70px 5px;
 
     @media (max-width: 950px) {
       flex-direction: column;
