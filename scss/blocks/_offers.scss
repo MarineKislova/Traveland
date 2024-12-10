@@ -17,7 +17,7 @@
 
   &__text {
     align-self: center;
-    width: 450px;
+    max-width: 450px;
     font-weight: 400;
     @include adaptiv-value("font-size", 18, 16, 0);
     line-height: 160%;
@@ -53,7 +53,6 @@
     border-radius: 8px;
     padding: 16px;
     text-align: left;
-  
   }
 
   &__card-img {
@@ -68,6 +67,8 @@
   }
 
   &__card-title {
+    display: flex;
+    justify-content: center;
     font-family: "Gelasio";
     font-weight: 500;
     font-size: 24px;
@@ -82,7 +83,6 @@
   }
 
   &__card-location {
-    
     font-weight: 400;
     font-size: 20px;
     @include adaptiv-value("font-size", 20, 16, 0);
@@ -111,7 +111,7 @@
       width: 20px;
       height: 20px;
       margin-right: 10px;
-        opacity: 0.6;
+      opacity: 0.6;
     }
   }
 
@@ -172,4 +172,3 @@
     font-size: 22px;
   }
 }
-
