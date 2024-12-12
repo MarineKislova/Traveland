@@ -53,6 +53,12 @@
     border-radius: 8px;
     padding: 16px;
     text-align: left;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.41);
+      background-color: rgba(215, 105, 105, 0.2);
+    }
   }
 
   &__card-img {

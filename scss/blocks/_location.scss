@@ -30,6 +30,7 @@
 
   &__cards {
     display: grid;
+  //  margin: 0 auto;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     gap: 31px;
     @include adaptiv-value("padding-top", 50, 30, 0);
@@ -39,6 +40,7 @@
     @include adaptiv-value("width", 360, 280, 0);
     display: flex;
     flex-direction: column;
+    justify-self: center;
     @include adaptiv-value("gap", 18, 10, 0);
   }
 
