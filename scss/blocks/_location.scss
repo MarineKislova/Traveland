@@ -31,9 +31,15 @@
   &__cards {
     display: grid;
   //  margin: 0 auto;
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 31px;
     @include adaptiv-value("padding-top", 50, 30, 0);
+
+    @media (min-width: 1440px) {
+  
+     gap: 99px;
+    }
+    
   }
 
   &__card {
@@ -42,6 +48,8 @@
     flex-direction: column;
     justify-self: center;
     @include adaptiv-value("gap", 18, 10, 0);
+
+    
   }
 
   &__img {

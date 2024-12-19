@@ -346,9 +346,14 @@ h6 {
 }
 .location__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 31px;
   padding-top: calc(30px + 20 * (100vw - 320px) / 1600);
+}
+@media (min-width: 1440px) {
+  .location__cards {
+    gap: 99px;
+  }
 }
 .location__card {
   width: calc(280px + 80 * (100vw - 320px) / 1600);
@@ -751,7 +756,16 @@ h6 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 5px;
+    gap: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer__container .footer__subscribe p {
+    text-align: center;
   }
 }
 .footer__logo {
@@ -829,10 +843,13 @@ h6 {
   letter-spacing: 0.06em;
 }
 .footer__subscribe p {
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-size: calc(16px + 4 * (100vw - 320px) / 1600);
   line-height: 150%;
   /* identical to box height, or 30px */
   letter-spacing: 0.06em;
+  font-weight: bold;
 }
 .footer__subscribe form {
   display: -webkit-box;
@@ -847,8 +864,8 @@ h6 {
   width: 100%;
   padding-left: 15px;
   border: 1px solid rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
   font-weight: 400;
   font-size: 16px;
